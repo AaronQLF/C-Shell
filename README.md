@@ -1,86 +1,73 @@
-The following document is based on Professor Christophe Dubach's README for the COMP520-W22 repository.
+**README.md**
 
-# Description of coursework (likely to be updated)! #
-The description of the coursework may be updated from time to time to add clarifications or fix mistakes.
-We encourage you to regularly check this repository and/or MyCourses for changes.
+# Custom Shell in C
 
-# Software requirements
-### Recommended: using CS machines (Mimi)
-If you use CS department lab machines, all the software required for development should be already installed. The CS machines 
-grant you access to a Linux home folder where you can keep your repository and do your work. This home folder is shared 
-amongst all CS machines when you log in using your CS account.
+Welcome to the Custom Shell project! This README file provides an overview of the project, instructions for installation, details on usage, key features, contribution guidelines, licensing information, and credits.
 
-To log in (SSH) into Mimi use the following command:
-```
-ssh <your_cs_username>@mimi.cs.mcgill.ca
-```
+## Introduction
 
-It will ask for your CS account password. You will be dropped into a terminal in your home directory (`~`).
+The Custom Shell project aims to develop a fully functional shell program implemented in C, providing a command-line interface for users to interact with their operating system. This custom shell includes essential features found in traditional Unix shells, along with additional functionalities for improved user experience and efficiency.
 
-We recommend you clone your team's fork of the code into your home directory:
-```
-git clone https://gitlab.cs.mcgill.ca/<your_cs_username>/comp310-winter23.git
-```
+## Installation
 
-After that, you can use Visual Studio Code SSH feature to modify the files in Mimi from your own machine. Follow these instructions:
-https://code.visualstudio.com/docs/remote/ssh
+To install the custom shell, follow these steps:
 
-### Using your own machine
-If you wish to develop using your own machine, you will need to ensure that you have the following software installed:
+1. Clone the repository to your local machine:
+   ```
+   git clone <repository_url>
+   ```
 
-1. Git (use the following tutorial https://www.atlassian.com/git/tutorials/install-git)
-2. GNU C Compiler (>=9.4.0). On Mac, `gcc` calls `clang`, which should be compatible, but **you may face issues**. On Windows, you can use [cygwin](https://www.cygwin.com/) to install the GNU tools.
-3. GNU Make (>=4.2.1). Same as above.
+2. Navigate to the directory containing the source code:
+   ```
+   cd custom-shell
+   ```
 
-# Tests #
-Your code will be tested against the scenarios in the `testcases` directory. For example, the `echo.txt` test passes 
-batch commands to your shell, the expected output is found on `echo_result.txt`.
+3. Compile the source code using a C compiler (e.g., GCC):
+   ```
+   gcc -o custom-shell custom-shell.c
+   ```
 
-## Autograder
-The autograder compiles the code in the `main` branch of your repository and then runs it against all the tests cases. 
-It will send an email report to the users that have a public email address in their GitLab profile.
+4. Run the compiled executable:
+   ```
+   ./custom-shell
+   ```
 
-This process happens every day. The autograder uses the version of the code found on your repo at 00:00am Montreal Time.
+## Usage
 
-# Setup #
+Once the custom shell is running, you can start entering commands. Here are some examples of commands you can use:
 
-## 1. Setting a public email
-At least one member of each team needs to set a public email on their GitLab profile in order to receive the autograder reports.
+- `ls`: List files and directories in the current directory.
+- `cd <directory>`: Change the current directory.
+- `pwd`: Print the current working directory.
+- `echo <message>`: Display a message.
+- `mkdir <directory>`: Create a new directory.
+- `rm <file>`: Remove a file.
 
-## 2. Forking the repository
-We are going to be using the Git revision control system during the course.
-If you use your own machine then make sure to install Git.
+For more information on command syntax and options, refer to the Features section below.
 
-Only one person per team needs to follow these steps. The team as a whole will develop their code on the forked repository. 
-In order to fork this repository:
+## Features
 
-1. Click the `Fork` button in the upper right-hand side
-2. In the fork options, use your user namespace (same as your username). Ensure the repository visibility is **Private**.
-3. In your fork, in the left hand side menu, go to Project information > Members
-   1. Grant access to your teammates with the **Owner** permission
-   2. Grant access to the teaching staff with the **Reporter** permission:
-      * Oana BALMAU (username: balmau)
-      * Sebastian ROLON (username: jrolon)
+1. **Command Execution:** Execute system commands entered by the user.
+2. **Built-in Commands:** Implement common shell commands directly within the shell.
+3. **Input/Output Redirection:** Redirect input and output of commands to and from files.
+4. **Piping:** Chain multiple commands together by piping output as input.
+5. **Background Processes:** Run commands in the background.
+6. **Signal Handling:** Handle signals such as Ctrl+C and Ctrl+Z.
+7. **Tab Completion:** Assist users with command typing by suggesting completions.
+8. **History:** Log previously executed commands for retrieval and rerunning.
+9. **Customization:** Customize shell environment settings, aliases, prompt, and functions.
 
-## 3. Cloning your team's fork
-Everyone on the team should follow these instructions. You will have to clone the forked repository to your local machine. 
-You can clone the repository using either HTTPS or SSH.
-Using SSH is more secure, but requires
-[uploading a private key to GitLab](https://docs.gitlab.com/ee/ssh/). HTTPS is less secure but simpler as it only
-requires you to enter your CS account username and password. If in doubt, HTTPS is sufficient.
+## Contributing
 
-In order to clone the repository via SSH you should ensure that you've uploaded a private key to GitLab, launch a terminal, and type:
+Contributions to the Custom Shell project are welcome! If you encounter any bugs or have suggestions for new features, please open an issue on GitHub or submit a pull request. For more information, refer to the CONTRIBUTING.md file.
 
-```
-$ git clone git@gitlab.cs.mcgill.ca:XXXXXXXX/comp310-winter23.git
-```
+## License
 
-Where XXXXXXXX is the CS gitlab account id of the teammate who created the fork.
+This project is licensed under the [MIT License](LICENSE.md).
 
-In order to clone the repository via HTTPS you should launch a terminal and type:
+## Credits
 
-```
-$ git clone https://gitlab.cs.mcgill.ca/XXXXXXXX/comp310-winter23.git
-```
+- John Doe - Lead Developer
+- Jane Smith - Contributor
 
-where XXXXXXX is the CS gitlab account id of the fork creator (as above), and you should be prompted to type in your CS gitlab account id and password.
+Thank you for using the Custom Shell! We hope you find it useful and welcome your feedback for further improvements.
