@@ -67,7 +67,6 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 ## Credits
 
-- John Doe - Lead Developer
-- Jane Smith - Contributor
+- Haroun Guessous - Lead Developer
 
 Thank you for using the Custom Shell! We hope you find it useful and welcome your feedback for further improvements.
